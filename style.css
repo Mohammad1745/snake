@@ -1,0 +1,54 @@
+.container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.start-btn,
+.pause-btn {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.form {
+    line-height: 1.5;
+    margin: 10px;
+}
+.arena {
+    margin: 10px auto auto;
+    border: grey solid 1px;
+    background-color: #ccc;
+    line-height: 0;
+    /*width: 502px;*/
+}
+.arena-dot {
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+}
+.inactive-dot {
+    background-color: #ccc;
+}
+.active-dot {
+    background-color: #555;
+    border-radius: 20%;
+}
+.frog {
+    background-color: #c53;
+    border-radius: 50%;
+}
+.up {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.down {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.left {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.right {
+    margin-top: 10px;
+    margin-left: 60px;
+}
