@@ -95,7 +95,7 @@ $(document).ready (function () {
     }
     function renderController() {
             $("#control").html(`
-                <div class="row">
+            <div class="row">
                 <div class="col-12">
                     <button id="up" class="up">W</button>
                 </div>

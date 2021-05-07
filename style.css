@@ -36,6 +36,10 @@
     background-color: #c53;
     border-radius: 50%;
 }
+.control {
+    margin: 10px auto auto;
+    width: 140px;
+}
 .up {
     margin-top: 10px;
     margin-left: 50px;
