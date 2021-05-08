@@ -1,11 +1,11 @@
-let row = 50;
-let column = 50;
+let row = 20;
+let column = 20;
 let snakeHeadPoint = [0,0];
 let snakeHead = snakeHeadPoint[0]*column+snakeHeadPoint[1];
 let snakeBody = [snakeHead];
 let snakeTail = snakeHead;
 let direction = 'R';
-let speed = 10;//dot per second
+let speed = 5;//dot per second
 let frog = 0;
 let gameMode = 0;
 let device = 'pc';
