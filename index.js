@@ -16,7 +16,7 @@ $(document).ready (function () {
     //rendering form
     renderInputForm();
     //mouse click
-    $("#start_btn").on('click', function () {
+    $('#start_btn').on('click', function () {
         if (gameMode===0 && checkInitialData()) {
             gameMode=1;
             $(this).html('Stop');
@@ -30,7 +30,7 @@ $(document).ready (function () {
             location.reload();
         }
     });
-    $("#pause_btn").on('click', function () {
+    $('#pause_btn').on('click', function () {
         if (gameMode===1) {
             gameMode=2;
             $(this).html('Resume');
@@ -40,7 +40,7 @@ $(document).ready (function () {
         }
     });
     //catching keypress
-    $("body").keypress(function(event){
+    $('body').keypress(function(event){
         if (event.keyCode===119 && direction!=='D') direction = 'U';
         else if (event.keyCode===97 && direction!=='R') direction = 'L';
         else if (event.keyCode===115 && direction!=='U') direction = 'D';
@@ -48,10 +48,10 @@ $(document).ready (function () {
         else if (event.keyCode===112) $("#pause_btn").trigger('click');
         // else alert(event.keyCode);
     });
-    $("#control").on('click', '#up', function () {if (direction!=='D') direction = 'U'})
-    $("#control").on('click', '#left', function () {if (direction!=='R') direction = 'L'})
-    $("#control").on('click', '#down', function () {if (direction!=='U') direction = 'D'})
-    $("#control").on('click', '#right', function () {if (direction!=='L') direction = 'R'})
+    $('#control').on('click', '#up', function () {if (direction!=='D') direction = 'U'})
+    $('#control').on('click', '#left', function () {if (direction!=='R') direction = 'L'})
+    $('#control').on('click', '#down', function () {if (direction!=='U') direction = 'D'})
+    $('#control').on('click', '#right', function () {if (direction!=='L') direction = 'R'})
 
     function renderInputForm () {
         $('#arena').html(`
@@ -78,10 +78,10 @@ $(document).ready (function () {
             </div>`);
     }
     function checkInitialData() {
-        row = $("#arena").find("input#row").val();
-        column = $("#arena").find("input#column").val();
-        speed = $("#arena").find("input#speed").val();
-        device = $("#arena").find("#device").val();
+        row = $('#arena').find("input#row").val();
+        column = $('#arena').find("input#column").val();
+        speed = $('#arena').find("input#speed").val();
+        device = $('#arena').find("#device").val();
         if (!(row&&column&&speed))
             alert("Empty Form Data");
         return row&&column&&speed;
@@ -94,7 +94,7 @@ $(document).ready (function () {
         }
     }
     function renderController() {
-            $("#control").html(`
+        $('#control').html(`
             <div class="row">
                 <div class="col-12">
                     <button id="up" class="up">U</button>
@@ -115,7 +115,7 @@ $(document).ready (function () {
     }
     function renderScore() {
         $('#score').html('Score: '+score);
-        $("#message").html("Score :)").css('color','green');
+        $('#message').html("Score :)").css('color','green');
         setTimeout(function () {
             $("#message").html("");
         },1000);
@@ -151,13 +151,13 @@ $(document).ready (function () {
         do {
             frog = Math.round(Math.random()*row*column);
         } while (snakeBody.includes(frog));
-        $("#arena").find('#arena_dot_'+frog).removeClass('inactive-dot active-dot').addClass('frog');
+        $('#arena').find('#arena_dot_'+frog).removeClass('inactive-dot active-dot').addClass('frog');
     }
     function activatePoint (point) {
-        $("#arena").find('#arena_dot_'+point).removeClass('inactive-dot frog').addClass('active-dot');
+        $('#arena').find('#arena_dot_'+point).removeClass('inactive-dot frog').addClass('active-dot');
     }
     function deactivatePoint (point) {
-        $("#arena").find('#arena_dot_'+point).removeClass('active-dot frog').addClass('inactive-dot');
+        $('#arena').find('#arena_dot_'+point).removeClass('active-dot frog').addClass('inactive-dot');
     }
     function wallStrike () {
         gameMode = 3;
@@ -166,14 +166,14 @@ $(document).ready (function () {
         else if (direction==='L') $("#arena").css('border-left', 'red solid 1px');
         else if (direction==='D') $("#arena").css('border-bottom', 'red solid 1px');
         else if (direction==='R') $("#arena").css('border-right', 'red solid 1px');
-        $("#message").html("Wall Strike :(").css('color','red');
+        $('#message').html("Wall Strike :(").css('color','red');
         strikeAudio.play();
     }
     function bodyStrike () {
         gameMode = 3;
-        $("#start_btn").html('Restart');
-        $("#arena").find('#arena_dot_'+snakeHead).css('background-color','#c33');
-        $("#message").html("Body Strike :(").css('color','red');
+        $('#start_btn').html('Restart');
+        $('#arena').find('#arena_dot_'+snakeHead).css('background-color','#c33');
+        $('#message').html("Body Strike :(").css('color','red');
         strikeAudio.play();
     }
 });

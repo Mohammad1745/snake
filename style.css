@@ -38,9 +38,8 @@
 }
 .control {
     position: fixed;
-    top: 100%;
     left: 50%;
-    transform: translate(-50%, -150%);
+    transform: translate(-50%, 10%);
     width: 140px;
 }
 .up,
