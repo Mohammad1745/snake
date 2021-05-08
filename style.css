@@ -37,16 +37,25 @@
     border-radius: 50%;
 }
 .control {
-    margin: 10px auto auto;
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -150%);
     width: 140px;
+}
+.up,
+.down,
+.left,
+.right {
+    padding: 5px 10px;
 }
 .up {
     margin-top: 10px;
-    margin-left: 50px;
+    margin-left: 55px;
 }
 .down {
     margin-top: 10px;
-    margin-left: 50px;
+    margin-left: 55px;
 }
 .left {
     margin-top: 10px;
@@ -54,5 +63,5 @@
 }
 .right {
     margin-top: 10px;
-    margin-left: 60px;
+    margin-left: 55px;
 }

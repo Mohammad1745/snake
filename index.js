@@ -97,7 +97,7 @@ $(document).ready (function () {
             $("#control").html(`
             <div class="row">
                 <div class="col-12">
-                    <button id="up" class="up">W</button>
+                    <button id="up" class="up">U</button>
                 </div>
             </div>
             <div class="row">
