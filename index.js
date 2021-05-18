@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         else if (event.key==='p') document.querySelector("#pause_btn").click()
         // else alert(event.keyCode)
     })
+    //mouse event
     let controller = document.querySelector('#control')
     controller.querySelector('#up').addEventListener('click', () => {if (direction!=='D') direction = 'U'})
     controller.querySelector('#left').addEventListener('click', () => {if (direction!=='R') direction = 'L'})
@@ -116,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderScore() {
         document.querySelector('#score').innerHTML = 'Score: '+score
         document.querySelector('#message').innerHTML = "Score :)"
-        document.querySelector('#message').color = 'green'
+        document.querySelector('#message').style.color = 'green'
         setTimeout(function () {
             document.querySelector("#message").innerHTML = ""
         },1000)
