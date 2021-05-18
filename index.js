@@ -166,12 +166,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function wallStrike () {
         gameMode = 3
         document.querySelector('#start_btn').innerHTML = 'Restart'
-        if (direction==='U') document.querySelector("#arena").borderTop = 'red solid 1px'
-        else if (direction==='L') document.querySelector("#arena").borderLeft = 'red solid 1px'
-        else if (direction==='D') document.querySelector("#arena").borderBottom = 'red solid 1px'
-        else if (direction==='R') document.querySelector("#arena").borderRight = 'red solid 1px'
+        if (direction==='U') document.querySelector("#arena").style.borderTop = 'red solid 1px'
+        else if (direction==='L') document.querySelector("#arena").style.borderLeft = 'red solid 1px'
+        else if (direction==='D') document.querySelector("#arena").style.borderBottom = 'red solid 1px'
+        else if (direction==='R') document.querySelector("#arena").style.borderRight = 'red solid 1px'
         document.querySelector('#message').innerHTML = "Wall Strike :("
-        document.querySelector('#message').color = 'red'
+        document.querySelector('#message').style.color = 'red'
         strikeAudio.play()
     }
     function bodyStrike () {
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector('#start_btn').innerHTML = 'Restart'
         document.querySelector('#arena').querySelector('#arena_dot_'+snakeHead).style.backgroundColor = '#c33'
         document.querySelector('#message').innerHTML = "Body Strike :("
-        document.querySelector('#message').color = 'red'
+        document.querySelector('#message').style.color = 'red'
         strikeAudio.play()
     }
 })
