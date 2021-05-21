@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
     //rendering form
     renderInputForm()
     //mouse click
-    document.querySelector('#start_btn').addEventListener('click', () => {
+    document.querySelector('#start_btn').addEventListener('click', e => {
         if (gameMode===0 && checkInitialData()) {
             gameMode=1
-            this.innerHTML = 'Stop'
+            document.querySelector('#start_btn').innerHTML = 'Stop'
             if (device==='mobile') renderController()
             renderArena()
             renderScore()
@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
             location.reload()
         }
     })
-    document.querySelector('#pause_btn').addEventListener('click', () => {
+    document.querySelector('#pause_btn').addEventListener('click', e => {
         if (gameMode===1) {
             gameMode=2
-            this.innerHTML = 'Resume'
+            document.querySelector('#pause_btn').innerHTML = 'Resume'
         } else if (gameMode===2) {
             gameMode=1
-            this.innerHTML = 'Pause'
+            document.querySelector('#pause_btn').innerHTML = 'Pause'
         }
     })
     //catching keypress
@@ -50,10 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     //mouse event
     let controller = document.querySelector('#control')
-    controller.querySelector('#up').addEventListener('click', () => {if (direction!=='D') direction = 'U'})
-    controller.querySelector('#left').addEventListener('click', () => {if (direction!=='R') direction = 'L'})
-    controller.querySelector('#down').addEventListener('click', () => {if (direction!=='U') direction = 'D'})
-    controller.querySelector('#right').addEventListener('click', () => {if (direction!=='L') direction = 'R'})
+    controller.querySelector('#up').addEventListener('click', e => {if (direction!=='D') direction = 'U'})
+    controller.querySelector('#left').addEventListener('click', e => {if (direction!=='R') direction = 'L'})
+    controller.querySelector('#down').addEventListener('click', e => {if (direction!=='U') direction = 'D'})
+    controller.querySelector('#right').addEventListener('click', e => {if (direction!=='L') direction = 'R'})
 
     function renderInputForm () {
         document.querySelector('#arena').innerHTML =
