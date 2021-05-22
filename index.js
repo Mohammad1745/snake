@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('#start_btn').addEventListener('click', e => {
         if (gameMode===0 && checkInitialData()) {
             gameMode=1
-            document.querySelector('#start_btn').innerHTML = 'Stop'
+            e.target.innerHTML = 'Stop'
             if (device==='mobile') renderController()
             renderArena()
             renderScore()
@@ -33,10 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('#pause_btn').addEventListener('click', e => {
         if (gameMode===1) {
             gameMode=2
-            document.querySelector('#pause_btn').innerHTML = 'Resume'
+            e.target.innerHTML = 'Resume'
         } else if (gameMode===2) {
             gameMode=1
-            document.querySelector('#pause_btn').innerHTML = 'Pause'
+            e.target.innerHTML = 'Pause'
         }
     })
     //catching keypress
